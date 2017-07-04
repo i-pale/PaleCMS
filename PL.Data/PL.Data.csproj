@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{468728C6-F053-45A6-BCF1-60EFC07FE025}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PL.Data</RootNamespace>
+    <AssemblyName>PL.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Component\Configurations\Core\Mapping\ModuleConfiguration.cs" />
+    <Compile Include="Component\Configurations\Core\Mapping\PermissionConfiguration.cs" />
+    <Compile Include="Component\Configurations\Core\Mapping\RoleConfiguration.cs" />
+    <Compile Include="Component\Configurations\Core\Mapping\UserConfiguration .cs" />
+    <Compile Include="Component\Configurations\Core\Mapping\UserGroupConfiguration.cs" />
+    <Compile Include="Component\Configurations\Core\ModuleConfiguration.generated.cs" />
+    <Compile Include="Component\Configurations\Core\PermissionConfiguration.generated.cs" />
+    <Compile Include="Component\Configurations\Core\RoleConfiguration.generated.cs" />
+    <Compile Include="Component\Configurations\Core\UserConfiguration.generated.cs" />
+    <Compile Include="Component\Configurations\Core\UserGroupConfiguration.generated.cs" />
+    <Compile Include="Component\DataHelper.cs" />
+    <Compile Include="Component\DbInitialize\DatabaseInitializer.cs" />
+    <Compile Include="Component\EF\EFContextFactory.cs" />
+    <Compile Include="Component\EF\EFDbContext.cs" />
+    <Compile Include="Component\EF\EFRepositoryBase.cs" />
+    <Compile Include="Component\EF\EFUnitOfWork.cs" />
+    <Compile Include="Component\EF\Extensions\DbContextExtensions.cs" />
+    <Compile Include="Component\EF\Interface\IRepository.cs" />
+    <Compile Include="Component\EF\Interface\IUnitOfWork.cs" />
+    <Compile Include="Component\Enum\EnumPermissionCode.cs" />
+    <Compile Include="Component\Enum\EnumPermissionType.cs" />
+    <Compile Include="Component\Enum\EnumYesOrNot.cs" />
+    <Compile Include="Component\Migrations\201509090634017_InitialCreate.cs" />
+    <Compile Include="Component\Migrations\201509090634017_InitialCreate.Designer.cs">
+      <DependentUpon>201509090634017_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Migrations\201509100747196_FirstMigration.cs" />
+    <Compile Include="Component\Migrations\201509100747196_FirstMigration.Designer.cs">
+      <DependentUpon>201509100747196_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Migrations\Configuration.cs" />
+    <Compile Include="Domain\Repositories\Core\IModuleRepository.cs" />
+    <Compile Include="Domain\Repositories\Core\IModuleRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\Impl\ModuleRepository.cs" />
+    <Compile Include="Domain\Repositories\Core\Impl\ModuleRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\Impl\PermissionRepository.cs" />
+    <Compile Include="Domain\Repositories\Core\Impl\PermissionRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\Impl\RoleRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\Impl\UserGroupRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\Impl\UserRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\IPermissionRepository.cs" />
+    <Compile Include="Domain\Repositories\Core\IPermissionRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\IRoleRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\IUserGroupRepository.generated.cs" />
+    <Compile Include="Domain\Repositories\Core\IUserRepository.generated.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Component\Migrations\201509090634017_InitialCreate.resx">
+      <DependentUpon>201509090634017_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Migrations\201509100747196_FirstMigration.resx">
+      <DependentUpon>201509100747196_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\Interface\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PL.Models\PL.Models.csproj">
+      <Project>{a16236d9-173e-4702-a307-b288157778b8}</Project>
+      <Name>PL.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PL.Tools\PL.Tools.csproj">
+      <Project>{9e5f7a32-fac8-4c22-89b8-aa9a42e2fb21}</Project>
+      <Name>PL.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PL.ViewModel\PL.ViewModel.csproj">
+      <Project>{205a0bdc-ecc9-4626-8182-77801c074860}</Project>
+      <Name>PL.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1FACE2C-E524-407F-8EA4-0C23E0C5E1C7}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PL.WEB</RootNamespace>
+    <AssemblyName>PL.WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="build\build.js" />
+    <Content Include="build\check-versions.js" />
+    <Content Include="build\dev-client.js" />
+    <Content Include="build\dev-server.js" />
+    <Content Include="build\utils.js" />
+    <Content Include="build\vue-loader.conf.js" />
+    <Content Include="build\webpack.base.conf.js" />
+    <Content Include="build\webpack.dev.conf.js" />
+    <Content Include="build\webpack.prod.conf.js" />
+    <Content Include="config\dev.env.js" />
+    <Content Include="config\index.js" />
+    <Content Include="config\prod.env.js" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="src\api\api.js" />
+    <Content Include="src\api\index.js" />
+    <Content Include="src\assets\bg1.jpg" />
+    <Content Include="src\assets\logo.png" />
+    <Content Include="src\assets\logo4.png" />
+    <Content Include="src\assets\theme\theme-darkblue\alert.css" />
+    <Content Include="src\assets\theme\theme-darkblue\autocomplete.css" />
+    <Content Include="src\assets\theme\theme-darkblue\badge.css" />
+    <Content Include="src\assets\theme\theme-darkblue\base.css" />
+    <Content Include="src\assets\theme\theme-darkblue\breadcrumb-item.css" />
+    <Content Include="src\assets\theme\theme-darkblue\breadcrumb.css" />
+    <Content Include="src\assets\theme\theme-darkblue\button-group.css" />
+    <Content Include="src\assets\theme\theme-darkblue\button.css" />
+    <Content Include="src\assets\theme\theme-darkblue\card.css" />
+    <Content Include="src\assets\theme\theme-darkblue\carousel-item.css" />
+    <Content Include="src\assets\theme\theme-darkblue\carousel.css" />
+    <Content Include="src\assets\theme\theme-darkblue\cascader.css" />
+    <Content Include="src\assets\theme\theme-darkblue\checkbox-group.css" />
+    <Content Include="src\assets\theme\theme-darkblue\checkbox.css" />
+    <Content Include="src\assets\theme\theme-darkblue\col.css" />
+    <Content Include="src\assets\theme\theme-darkblue\collapse-item.css" />
+    <Content Include="src\assets\theme\theme-darkblue\collapse.css" />
+    <Content Include="src\assets\theme\theme-darkblue\color-picker.css" />
+    <Content Include="src\assets\theme\theme-darkblue\date-picker.css" />
+    <Content Include="src\assets\theme\theme-darkblue\dialog.css" />
+    <Content Include="src\assets\theme\theme-darkblue\dropdown-item.css" />
+    <Content Include="src\assets\theme\theme-darkblue\dropdown-menu.css" />
+    <Content Include="src\assets\theme\theme-darkblue\dropdown.css" />
+    <Content Include="src\assets\theme\theme-darkblue\form-item.css" />
+    <Content Include="src\assets\theme\theme-darkblue\form.css" />
+    <Content Include="src\assets\theme\theme-darkblue\icon.css" />
+    <Content Include="src\assets\theme\theme-darkblue\index.css" />
+    <Content Include="src\assets\theme\theme-darkblue\input-number.css" />
+    <Content Include="src\assets\theme\theme-darkblue\input.css" />
+    <Content Include="src\assets\theme\theme-darkblue\loading.css" />
+    <Content Include="src\assets\theme\theme-darkblue\menu-item-group.css" />
+    <Content Include="src\assets\theme\theme-darkblue\menu-item.css" />
+    <Content Include="src\assets\theme\theme-darkblue\menu.css" />
+    <Content Include="src\assets\theme\theme-darkblue\message-box.css" />
+    <Content Include="src\assets\theme\theme-darkblue\message.css" />
+    <Content Include="src\assets\theme\theme-darkblue\notification.css" />
+    <Content Include="src\assets\theme\theme-darkblue\option-group.css" />
+    <Content Include="src\assets\theme\theme-darkblue\option.css" />
+    <Content Include="src\assets\theme\theme-darkblue\pagination.css" />
+    <Content Include="src\assets\theme\theme-darkblue\popover.css" />
+    <Content Include="src\assets\theme\theme-darkblue\progress.css" />
+    <Content Include="src\assets\theme\theme-darkblue\radio-button.css" />
+    <Content Include="src\assets\theme\theme-darkblue\radio-group.css" />
+    <Content Include="src\assets\theme\theme-darkblue\radio.css" />
+    <Content Include="src\assets\theme\theme-darkblue\rate.css" />
+    <Content Include="src\assets\theme\theme-darkblue\reset.css" />
+    <Content Include="src\assets\theme\theme-darkblue\row.css" />
+    <Content Include="src\assets\theme\theme-darkblue\scrollbar.css" />
+    <Content Include="src\assets\theme\theme-darkblue\select-dropdown.css" />
+    <Content Include="src\assets\theme\theme-darkblue\select.css" />
+    <Content Include="src\assets\theme\theme-darkblue\slider.css" />
+    <Content Include="src\assets\theme\theme-darkblue\spinner.css" />
+    <Content Include="src\assets\theme\theme-darkblue\step.css" />
+    <Content Include="src\assets\theme\theme-darkblue\steps.css" />
+    <Content Include="src\assets\theme\theme-darkblue\submenu.css" />
+    <Content Include="src\assets\theme\theme-darkblue\switch.css" />
+    <Content Include="src\assets\theme\theme-darkblue\tab-pane.css" />
+    <Content Include="src\assets\theme\theme-darkblue\table-column.css" />
+    <Content Include="src\assets\theme\theme-darkblue\table.css" />
+    <Content Include="src\assets\theme\theme-darkblue\tabs.css" />
+    <Content Include="src\assets\theme\theme-darkblue\tag.css" />
+    <Content Include="src\assets\theme\theme-darkblue\time-picker.css" />
+    <Content Include="src\assets\theme\theme-darkblue\time-select.css" />
+    <Content Include="src\assets\theme\theme-darkblue\tooltip.css" />
+    <Content Include="src\assets\theme\theme-darkblue\tree.css" />
+    <Content Include="src\assets\theme\theme-darkblue\upload.css" />
+    <Content Include="src\assets\theme\theme-green\alert.css" />
+    <Content Include="src\assets\theme\theme-green\autocomplete.css" />
+    <Content Include="src\assets\theme\theme-green\badge.css" />
+    <Content Include="src\assets\theme\theme-green\base.css" />
+    <Content Include="src\assets\theme\theme-green\breadcrumb-item.css" />
+    <Content Include="src\assets\theme\theme-green\breadcrumb.css" />
+    <Content Include="src\assets\theme\theme-green\button-group.css" />
+    <Content Include="src\assets\theme\theme-green\button.css" />
+    <Content Include="src\assets\theme\theme-green\card.css" />
+    <Content Include="src\assets\theme\theme-green\carousel-item.css" />
+    <Content Include="src\assets\theme\theme-green\carousel.css" />
+    <Content Include="src\assets\theme\theme-green\cascader.css" />
+    <Content Include="src\assets\theme\theme-green\checkbox-group.css" />
+    <Content Include="src\assets\theme\theme-green\checkbox.css" />
+    <Content Include="src\assets\theme\theme-green\col.css" />
+    <Content Include="src\assets\theme\theme-green\collapse-item.css" />
+    <Content Include="src\assets\theme\theme-green\collapse.css" />
+    <Content Include="src\assets\theme\theme-green\color-picker.css" />
+    <Content Include="src\assets\theme\theme-green\date-picker.css" />
+    <Content Include="src\assets\theme\theme-green\dialog.css" />
+    <Content Include="src\assets\theme\theme-green\dropdown-item.css" />
+    <Content Include="src\assets\theme\theme-green\dropdown-menu.css" />
+    <Content Include="src\assets\theme\theme-green\dropdown.css" />
+    <Content Include="src\assets\theme\theme-green\form-item.css" />
+    <Content Include="src\assets\theme\theme-green\form.css" />
+    <Content Include="src\assets\theme\theme-green\icon.css" />
+    <Content Include="src\assets\theme\theme-green\index.css" />
+    <Content Include="src\assets\theme\theme-green\input-number.css" />
+    <Content Include="src\assets\theme\theme-green\input.css" />
+    <Content Include="src\assets\theme\theme-green\loading.css" />
+    <Content Include="src\assets\theme\theme-green\menu-item-group.css" />
+    <Content Include="src\assets\theme\theme-green\menu-item.css" />
+    <Content Include="src\assets\theme\theme-green\menu.css" />
+    <Content Include="src\assets\theme\theme-green\message-box.css" />
+    <Content Include="src\assets\theme\theme-green\message.css" />
+    <Content Include="src\assets\theme\theme-green\notification.css" />
+    <Content Include="src\assets\theme\theme-green\option-group.css" />
+    <Content Include="src\assets\theme\theme-green\option.css" />
+    <Content Include="src\assets\theme\theme-green\pagination.css" />
+    <Content Include="src\assets\theme\theme-green\popover.css" />
+    <Content Include="src\assets\theme\theme-green\progress.css" />
+    <Content Include="src\assets\theme\theme-green\radio-button.css" />
+    <Content Include="src\assets\theme\theme-green\radio-group.css" />
+    <Content Include="src\assets\theme\theme-green\radio.css" />
+    <Content Include="src\assets\theme\theme-green\rate.css" />
+    <Content Include="src\assets\theme\theme-green\reset.css" />
+    <Content Include="src\assets\theme\theme-green\row.css" />
+    <Content Include="src\assets\theme\theme-green\scrollbar.css" />
+    <Content Include="src\assets\theme\theme-green\select-dropdown.css" />
+    <Content Include="src\assets\theme\theme-green\select.css" />
+    <Content Include="src\assets\theme\theme-green\slider.css" />
+    <Content Include="src\assets\theme\theme-green\spinner.css" />
+    <Content Include="src\assets\theme\theme-green\step.css" />
+    <Content Include="src\assets\theme\theme-green\steps.css" />
+    <Content Include="src\assets\theme\theme-green\submenu.css" />
+    <Content Include="src\assets\theme\theme-green\switch.css" />
+    <Content Include="src\assets\theme\theme-green\tab-pane.css" />
+    <Content Include="src\assets\theme\theme-green\table-column.css" />
+    <Content Include="src\assets\theme\theme-green\table.css" />
+    <Content Include="src\assets\theme\theme-green\tabs.css" />
+    <Content Include="src\assets\theme\theme-green\tag.css" />
+    <Content Include="src\assets\theme\theme-green\time-picker.css" />
+    <Content Include="src\assets\theme\theme-green\time-select.css" />
+    <Content Include="src\assets\theme\theme-green\tooltip.css" />
+    <Content Include="src\assets\theme\theme-green\tree.css" />
+    <Content Include="src\assets\theme\theme-green\upload.css" />
+    <Content Include="src\assets\user.png" />
+    <Content Include="src\common\js\util.js" />
+    <Content Include="src\main.js" />
+    <Content Include="src\mock\data\user.js" />
+    <Content Include="src\mock\index.js" />
+    <Content Include="src\mock\mock.js" />
+    <Content Include="src\routes.js" />
+    <Content Include="src\vuex\actions.js" />
+    <Content Include="src\vuex\getters.js" />
+    <Content Include="src\vuex\store.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dist\.gitkeep" />
+    <Content Include="src\App.vue" />
+    <Content Include="src\assets\theme\theme-darkblue\fonts\element-icons.ttf" />
+    <Content Include="src\assets\theme\theme-darkblue\fonts\element-icons.woff" />
+    <Content Include="src\assets\theme\theme-green\fonts\element-icons.ttf" />
+    <Content Include="src\assets\theme\theme-green\fonts\element-icons.woff" />
+    <Content Include="src\components\.gitkeep" />
+    <Content Include="src\styles\vars.scss" />
+    <Content Include="src\views\404.vue" />
+    <Content Include="src\views\charts\echarts.vue" />
+    <Content Include="src\views\Home.vue" />
+    <Content Include="src\views\Login.vue" />
+    <Content Include="src\views\Main.vue" />
+    <Content Include="src\views\nav1\Form.vue" />
+    <Content Include="src\views\nav1\Table.vue" />
+    <Content Include="src\views\nav1\user.vue" />
+    <Content Include="src\views\nav2\Page4.vue" />
+    <Content Include="src\views\nav2\Page5.vue" />
+    <Content Include="src\views\nav3\Page6.vue" />
+    <Content Include="static\.gitkeep" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10494</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10494/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
