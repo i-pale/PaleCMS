@@ -40,7 +40,7 @@ namespace PL.ViewModel.Core
         [Display(Name = "链接地址")]
         [StringLength(50)]
         public string LinkUrl { get; set; }
-        [Description("菜单图标")]
+        [Display(Name = "链接地址")]
         [StringLength(50)]
         public string IconStyle { get; set; }
 
